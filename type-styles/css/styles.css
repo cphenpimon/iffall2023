@@ -1,0 +1,99 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: rgb(255, 210, 229);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: rgb(223, 42, 151);
+    color: white;
+    padding: 4% 15%;
+}
+
+div{
+    margin: 7% 15%;
+}
+
+h1{
+    font-size: 50px;
+    margin-bottom: .6em;
+    margin-top: 0em;
+}
+
+h2 {
+    font-size: 30px;
+    margin-bottom: .5em;
+    color: rgb(223, 42, 151);
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 24px;
+    margin-top: .5em;
+    margin-bottom: .5em;
+    color: rgb(223, 42, 151);
+    font-weight: normal;
+}
+
+p{
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 20px;
+}
+
+p.fontnormal {
+    font-weight: normal;
+}
+
+p.fontbold {
+    font-weight: bold;
+}
+
+p.fontitalic {
+    font-style: italic;
+}
+
+p.fontnormal {
+    letter-spacing: normal;
+}
+
+p.fontwide {
+    letter-spacing: 0.3em;
+}
+
+p.fontnarrow {
+    letter-spacing: -0.06em;
+}
+
+p.fontnone {
+    text-decoration: none;
+}
+
+p.fontunderline {
+    text-decoration: underline;
+}
+
+p.fontlinethrough {
+    text-decoration: line-through;
+}
+
+p.fontoverline {
+    text-decoration: overline;
+}
+
+p.fontnone {
+    text-transform: none;
+}
+
+p.fontuppercase {
+    text-transform: uppercase;
+}
+
+p.fontlowercase {
+    text-transform: lowercase;
+}
+
+p.fontcapitalize {
+    text-transform: capitalize;
+}
