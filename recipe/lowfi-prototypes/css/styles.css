@@ -1,0 +1,13 @@
+html { 
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+    font-family: futura-pt, sans-serif;
+    font-size: 15pt;
+    margin-bottom: 5%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
