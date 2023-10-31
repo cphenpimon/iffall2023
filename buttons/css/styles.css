@@ -1,0 +1,506 @@
+body {
+    color: #333;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    margin: 40px;
+}
+
+h1 {
+     font-size: 30px;
+     margin-bottom: 40px;
+}
+
+.button_container {
+    border: 1px solid #ddd;
+    margin: 0 10px 10px 0;
+    padding: 20px;
+    width: 300px;
+    height: 300px;
+    float: left;
+    overflow: hidden;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/*----------------------------EXAMPLE BUTTONS----------------------------*/
+a#btn_spotify {
+    display: inline-block;
+    height: 50px;
+    box-sizing: border-box;
+    border-radius: 25px;
+    margin: auto;
+    margin-top: 100px;
+    padding: 10px 40px 0 40px;
+    background-color: #2ebd59;
+    border: 2px solid #2ebd59;
+    color: #fff;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all .5s;
+}
+
+a#btn_spotify:hover {
+    background-color: #fff;
+    border: 2px solid #000;
+    color: #000;
+}
+
+a#btn_amazon {
+    display: block;
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+    border-radius: 50px;
+    margin: auto;
+    margin-top: 75px;
+    padding-top: 8px;
+    background-color: #232f3e;
+    color: #fff;
+    text-align: center;
+    font-size: 60px;
+    transition: all .2s;
+}
+
+a#btn_amazon:hover {
+    background-color: #fc9a18;
+}
+
+a#btn_twitter {
+    display: inline-block;
+    height: 40px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin: auto;
+    margin-top: 105px;
+    padding: 10px 30px 0 30px;
+    background-color: #56cdf1;
+    color: #fff;
+    font-size: 18px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a#btn_twitter:hover {
+
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#2ebfec+0,28a5cb+100 */
+    background: rgb(46,191,236); /* Old browsers */
+    background: -moz-linear-gradient(-45deg,  rgba(46,191,236,1) 0%, rgba(40,165,203,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg,  rgba(46,191,236,1) 0%,rgba(40,165,203,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg,  rgba(46,191,236,1) 0%,rgba(40,165,203,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2ebfec', endColorstr='#28a5cb',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+
+a#btn_indiegogo {
+    display: inline-block;
+    position: relative;
+    margin:auto;
+    margin-top: 100px;
+    padding: 8px 16px;
+    background-color: #fff;
+    color: #eb1478;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: -2px;
+    transition: all .2s;
+}
+
+a#btn_indiegogo:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: #eb1478;
+    transition: all .5s;
+}
+
+a#btn_indiegogo:hover {
+    color: #fff;
+}
+
+a#btn_indiegogo:hover:before {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+a#btn_indiegogo span {
+    position: relative;
+    z-index: 10;
+}
+
+/*----------------------------SPOTIFY BUTTON----------------------------*/
+a#btn_spotify2 {
+    display: inline-block;
+    margin-top: 75px;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+    transition: background-image 0.3s, border 0.3s;
+    text-decoration: none;
+    background-image: url(../images/spotifylogowhite.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 2px solid transparent;
+}
+
+a#btn_spotify2:hover {
+    background-image: url(../images/spotifylogoblack.jpg);
+    border: 5px solid #000000;
+}
+
+/*----------------------------NIKE BUTTON----------------------------*/
+a.btn_nike {
+    display: inline-block;
+    width: 200px;
+    height: 70px;
+    box-sizing: border-box;
+    border-radius: 0;
+    margin: auto;
+    margin-top: 100px;
+    background-color: #000;
+    border: 5px solid #000;
+    color: #fff;
+    font-family: "futura-pt-bold", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+a.btn_nike .front, a.btn_nike .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+a.btn_nike .back {
+    background-color: #fff;
+    border: 0.8px solid #000;
+    color: #000;
+    padding-left: 25px;
+    font-size: 25px;
+    background-image: url('../images/nike-4-logo-png-transparent.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: rotateY(180deg);
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+a.btn_nike:hover .front {
+    transform: rotateY(180deg);
+}
+
+a.btn_nike:hover .back {
+    transform: rotateY(0deg);
+}
+
+/*----------------------------EXPLODING KITTENS BUTTON----------------------------*/
+a#btn_exploding_kittens {
+    display: inline-block;
+    margin-top: 105px;
+    padding: 10px 20px;
+    font-family: "bebas-neue-pro", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    font-style: normal;
+    text-decoration: none; 
+    color: white;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffbb00+0,ff6a00+100 */
+    background: linear-gradient(to right,  #ffbb00 0%,#ff6a00 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    transition: all 0.3s;
+        animation: shake 0.5s infinite;
+    animation-play-state: paused; 
+}
+
+a#btn_exploding_kittens:hover {
+    color: black;
+    border: 5px solid black;
+    text-decoration: none;
+    animation-play-state: running;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);   
+    font-family: "bebas-neue-pro-expanded", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0);}
+    25% { transform: translateX(-5px); }
+    50% {transform: translateX(5px); }
+    75% { transform: translateX(-5px);}
+    100% { transform: translateX(5px); }
+}
+
+/*----------------------------OLD NAVY BUTTON----------------------------*/
+a#btn_oldnavy {
+    display: inline-block;
+    height: 50px;
+    box-sizing: border-box;
+    border-radius: 100%;
+    margin: auto;
+    margin-top: 100px;
+    padding: 10px 40px 0 40px;
+    text-decoration: none;
+    transition: color 0.4s, background-color 0.4s;
+    position: relative;
+    color: #003764; 
+    font-size: 20px;
+    font-family: Gotham, "Helvetica Neue", sans-serif;
+    font-weight: bold;
+    }
+    
+    a#btn_oldnavy::before {
+      content: '';
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 0;
+      height: 0;
+      background-color: #003764;
+      border-radius: 100%;
+      transition: width 0.4s, height 0.4s;
+      z-index: -1;
+    }
+    
+a#btn_oldnavy:hover {
+    color: #fff;
+}
+    
+a#btn_oldnavy:hover::before {
+    width: 100%;
+    height: 100%;
+}
+
+/*----------------------------COLOR RUN BUTTON----------------------------*/
+a#btn_colorrun {
+    display: inline-block;
+    margin-top: 90px;
+    width: 150px;
+    height: 70px;
+    background-color: #000;
+    color: #fff;
+    font-size: 20px;
+    font-family: "field-gothic-compact", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;
+    text-decoration: none;
+    overflow: hidden;
+    position: relative;
+}
+
+a#btn_colorrun span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 70px;
+}
+
+a#btn_colorrun span::after {
+    content: "THE COLOR RUN"; 
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+    transition: transform 0.3s;
+    line-height: 70px;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f43092+0,ffb630+50,00b9fc+99 */
+    background: linear-gradient(to right,  #f43092 0%,#ffb630 50%,#00b9fc 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+a#btn_colorrun:hover span::after {
+    transform: translateY(0);
+}
+
+/*----------------------------LYFT BUTTON----------------------------*/
+a#btn_lyft {
+    display: inline-block;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    margin: auto;
+    margin-top: 65px;
+    overflow: hidden;
+    position: relative;
+    background-color: #fff;
+    border: 5px solid #FF6EC7;
+    color: #FF6EC7;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../images/logo_standard_pink.png');
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: transform 0.3s;
+    transform-origin: center center;
+    transform: scale(0.8);
+}
+
+a#btn_lyft:hover {
+    background-image: url('../images/lyftwhitelogo.png');
+    transform: scale(1.2);
+    box-shadow: 0 0 20px #FF6EC7;
+    background-color: #FF6EC7;
+    color: #fff;
+}
+
+/*----------------------------CARTOON NETWORK BUTTON----------------------------*/
+a#btn_CN {
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+    margin-top: 100px;
+    overflow: hidden;
+    position: relative;
+    background-image: url(../images/CNlogo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: transform 0.3s;
+    transform-origin: center center;
+    transform: rotate(0deg);
+  }
+  
+  a#btn_CN:hover {
+    animation: spin 1s linear 1;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+/*----------------------------MICHAEL KORS BUTTON----------------------------*/
+a#btn_michaelkors {
+    display: inline-block;
+    margin: auto;
+    margin-top: 85px;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color: #e5bd65;
+    text-decoration: none;
+    background-color: #1a191e;
+    border: 5px solid #e5bd65;
+    transition: background-color 0.3s, color 0.3s;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a#btn_michaelkors .hover-effect {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background-image: url(../images/michaelkorslogo.jpg);
+    background-size: cover;
+    transition: width 0.3s, height 0.3s;
+}
+
+a#btn_michaelkors:hover .hover-effect {
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+}
+
+/*----------------------------FACEBOOK BUTTON----------------------------*/
+a#btn_facebook {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 100px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 30px;
+    color: #1877F2;
+    background-color: transparent;
+    border: 2px solid transparent;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: color 0.3s;
+}
+
+a#btn_facebook::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#207ce5+0,325dba+100 */
+    background: linear-gradient(to right,  #207ce5 0%,#325dba 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    transition: left 0.3s;
+    z-index: -1;
+    transform-origin: right;
+}
+
+a#btn_facebook:hover {
+    color: white;
+}
+
+a#btn_facebook:hover::before {
+    left: 0;
+    transform-origin: left;
+}
+
+/*----------------------------INSTAGRAM BUTTON----------------------------*/
+a#btn_instagram {
+    display: inline-block;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    margin: auto;
+    margin-top: 65px;
+    overflow: hidden;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../images/instagramcolorlogo.jpg');
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background-image 0.3s;
+}
+
+a#btn_instagram:hover {
+background-image: url('../images/instagramcolorbg.png');
+}
