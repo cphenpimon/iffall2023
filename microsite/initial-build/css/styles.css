@@ -6,8 +6,8 @@ body {
     padding: 0;
 }
 
-/* Nav Bar */
-.nav-bar {
+/* Desktop Nav Bar */
+.desktop-nav {
     background-color: white;
     padding: 30px;
     position: sticky;
@@ -15,13 +15,13 @@ body {
     z-index: 1000;
 }
 
-nav ul {
+.desktop-nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-nav ul li {
+.desktop-nav ul li {
     display: inline-block;
     margin-right: 20px;
 }
@@ -124,6 +124,7 @@ section.science-home{
     margin: auto;
     padding-top: 40px;
     padding-bottom: 40px;
+    padding-left: 20px;
 }
 
 header .home-container{
@@ -184,6 +185,7 @@ footer a:hover{
 .rectangular-button {
     display: inline-block;
     padding: 10px 20px;
+    margin-left: 20px;
     background-color: #333;
     color: white;
     text-decoration: none;
@@ -206,19 +208,6 @@ footer a:hover{
 
 /* Mobile Styles */
 @media only screen and (max-width: 767px) {
-    /* Nav Bar */
-    .nav-bar {
-        padding: 15px;
-    }
-
-    nav ul {
-        text-align: center;
-    }
-
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
 
     /* Global Styles */
     h1 {
@@ -231,9 +220,10 @@ footer a:hover{
     }
 
     p {
-        font-size: 1em;
-        line-height: 1.5; 
-        padding-bottom: 10px;
+        width: 90%;
+        font-size: 13px;
+        line-height: 1.5;
+        padding-bottom: 30px;
     }
 
     /* Home Page */
@@ -242,8 +232,9 @@ footer a:hover{
     .home-content p {
         margin-top: 20px;
         margin-bottom: -8px;
-        text-align: center;
+        text-align: left;
         padding-right: 0; 
+        padding-left: 20px;
     }
 
     /* Header */
@@ -251,13 +242,24 @@ footer a:hover{
         padding-top: 40px;
         padding-bottom: 40px;
     }
+    .home-container{
+        width: 100%;
+        height: auto;
+        margin: auto;
+        padding-top: 0px;
+        padding-bottom: 70px;
+        padding-left: 0px;
+    }
 
     img.home {
         float: none;
-        margin: 0 auto 20px auto;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0px;
+        margin-bottom: 0px;
         width: 100%;
-        max-width: 400px;
         height: auto;
+        border: aliceblue;
     }
 
     /* Discovery Page */
@@ -279,6 +281,21 @@ footer a:hover{
         font-size: 1.5em; 
     }
 
+    /* Button */
+.rectangular-button {
+    padding: 10px 20px;
+    margin-right: 430px;
+    float: right;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Staatliches', sans-serif;
+    font-size: 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
     /* Footer */
     footer {
         padding: 10px 0;
@@ -286,7 +303,53 @@ footer a:hover{
 
     footer p {
         margin: 0;
-        text-align: center;
+        text-align: left;
+        padding-left: 20px;
     }
+
+    /* Mobile Nav*/
+.mobile-nav {
+    display: none;
+    font-family: "interstate", sans-serif;
 }
 
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    padding-right: 30px;
+}
+
+.text-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 10px;
+}
+
+.mobile-nav .text-link {
+    display: none;
+    font-size: 24px;
+    padding-top: 10px;
+}
+
+.mobile-nav .text-link.active {
+    display: flex;
+}
+
+@media (max-width: 767px) {
+    .desktop-nav {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .mobile-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 10px;
+    }
+}
+}

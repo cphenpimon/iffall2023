@@ -20,22 +20,42 @@
             </div>
         </header>
 
-    <!----Nav Bar-->
-    <div class="nav-bar">
+    <!----Desktop Nav Bar-->
+    <div class="desktop-nav">
         <nav>
             <ul>
                 <li><a href="index.html">Time</a></li>
                 <li><a href="discovery.html">Discovery</a></li>
                 <li><a href="society.html">Society</a></li>
-                <li><a href="Science.html">Science</a></li>
+                <li><a href="science.html">Science</a></li>
             </ul>
         </nav>
     </div>
 
+    <!---Mobile Nav Bar-->
+    <nav class="mobile-nav">
+        <div class="menu-toggle" onclick="toggleMobileMenu()">&#9776;</div>
+        <div class="text-links">
+            <div class="text-link"><a href="index.html">Time</a></div>
+            <div class="text-link"><a href="discovery.html">Discovery</a></div>
+            <div class="text-link"><a href="society.html">Society</a></div>
+            <div class="text-link"><a href="science.html">Science</a></div>
+        </div>
+    </nav>
+    <script>
+        function toggleMobileMenu() {
+            var mobileLinks = document.querySelectorAll('.mobile-nav .text-link');
+    
+            mobileLinks.forEach(function(link) {
+                link.classList.toggle('active');
+            });
+        }
+    </script>
+
     <section class="discovery-home">
         <div class="home-container">
-            <h3>Discovery</h3>
             <img class="home" src="images/discovery-home.jpg">
+            <h3>Discovery</h3>
             <p>The discovery of time measurement has evolved through history. Early civilizations used sundials, while the hourglass became popular in the Middle Ages. The development of the modern watch in the 16th century marked a significant leap in timekeeping, enhancing accuracy and portability in our daily lives.</p>
            <button class="rectangular-button"><a href="discovery.html">Learn More</a></button>
 
@@ -44,8 +64,8 @@
 
     <section class="society-home">
         <div class="home-container">
-            <h3>Society</h3>
             <img class="home" src="images/society-home.jpg">
+            <h3>Society</h3>
             <p>Time is the heartbeat of society, orchestrating our daily routines and milestones. It structures our lives, from punctual meetings to annual celebrations, and fuels our ambitions, prompting us to set goals and deadlines. The collective agreement on time allows for coordination, collaboration, and progress. It also holds religious and philosophical significance, influencing our beliefs and inspiring deep philosophical questions about existence and reality.</p>
             <button class="rectangular-button"><a href="society.html">Learn More</a></button>
         </div>
@@ -53,8 +73,8 @@
 
     <section class="science-home">
         <div class="home-container">
-            <h3>Science</h3>
             <img class="home" src="images/science-home.jpg">
+            <h3>Science</h3>
             <p>The science of time, or horology, delves into the nature, measurement, and perception of time. It encompasses various scientific disciplines, including physics, astronomy, and psychology, to explore time's fundamental properties, from its role in the universe to the development of precise timekeeping devices like atomic clocks.</p>
             <button class="rectangular-button"><a href="science.html">Learn More</a></button>
         </div>
