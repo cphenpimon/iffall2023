@@ -6,7 +6,6 @@ body {
     padding: 0;
 }
 
-
 /* Desktop Nav Bar */
 .desktop-nav {
     background-color: white;
@@ -29,16 +28,35 @@ body {
     margin-left: 40px;
     font-family: 'Staatliches', sans-serif;
     font-size: 25px;
+    position: relative;
 }
 
-nav a {
+.desktop-nav a {
     text-decoration: none;
     color: black;
 }
 
-nav a:hover {
-    text-decoration: underline;
-    font-weight: bold;
+.desktop-nav a::before,
+.desktop-nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background: black;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s;
+}
+
+.desktop-nav a::after {
+    transform-origin: left;
+}
+
+.desktop-nav a:hover::before,
+.desktop-nav a:hover::after {
+    transform: scaleX(1);
 }
 
 .mobile-nav {
@@ -46,7 +64,6 @@ nav a:hover {
 }
 
 /*Images*/
-
 img {
     max-width: 100%;
     /* height: auto; */
@@ -99,7 +116,7 @@ p{
   }
 
 header{
-    background-image: url("../images/home-background.jpeg");
+    background-image: url("../images/home-background3.jpg");
     background-position: center;
     background-size: cover;
     text-align: center;
@@ -148,24 +165,30 @@ img.home{
     margin-left: 40px;
     margin-bottom: 40px;
 }
-/*Discovery Page */
 
-body.inside-page {
+/*Discovery Page */
+body.discovery {
   background-color: black;
 }
-
-.discovery-content {
-    border-left: 12px solid #fff;
+body.discovery > .content-container {
+  border-left: 15px solid #fff;
+  height: auto;
 }
-.discovery-subsection h3 {
+.discovery-content {
+    margin-left: 80px;
+}
+.discovery h1 {
+    color: white;
+    margin-left: 80px;
+}
+
+.discovery-content h3 {
     color:white;
-    margin-left: 50px;
 }
 
 .discovery-subsection p{
     color:white;
     max-width: 400px;
-    margin-left: 50px;
 }
 
 .discovery-subsection img{
@@ -173,8 +196,6 @@ body.inside-page {
     width: 320px;
     height: auto;
     margin-left: 50px;
-    margin-top: 20px;
-    margin-bottom: 20px;
     border-style: solid;
     border-color: white;
     border-width: 7px;
@@ -184,88 +205,15 @@ body.inside-page {
     margin: 0 10% 10% 10%;
 }
 
-/*Society Page */
-
-.society-content-box {
-    background-color: black;
-    overflow:auto;
-    height: auto;
-}
-.society-content-box .society-subsection-left{
-    float: left;
-    width: auto;
-    max-width: 500px;
-    height: auto;
-    margin-right: 40px;
-}
-
-.society-content-box .society-subsection-right{
-    float: left;
-    width: auto;
-    max-width: 400px;
-    height: auto;
-      
-}
-.society-content-box .society-subsection-left h3 {
-    color: white;
-    margin-bottom: -20px;
-    padding-right: 20px;
-    border-right: 15px solid #fff;
-
-}
-.society-content-box .society-subsection-right h3 {
-    color: white;
-    padding-right: 20px;
-}
-.society-content-box .society-subsection-left p {
-    color: white;
-    border-right: 15px solid #fff;
-    padding-right: 20px;
-    
-}
-.society-content-box .society-subsection-right p {
-    color: white; 
-}
-.background1{
-    background-color: black;
-    height:auto;
-    width:auto;
-}
-
-.background2{
-    background-color: #dadada;
-    height:auto;
-    width:auto;
-}
-.society-subsection img{
-    float: right;
-    width: 100%;
-    max-width: 800px;
-    height: auto;
-    object-fit: contain;
-    margin-left: 50px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border-style: solid;
-    border-color: white;
-    border-width: 7px;
-}
-.society-subsection h3{
-    color: black;
-    padding-top: 40px;
-}
-.society-subsection p{
-    color: black;
-    max-width: 500px
-}
 /*Science Page */
 .science-content h3{
-    color:white;
-}
-.science-content p{
-    color:white;
+    color:black;
 }
 
+/*Society Page */
+.society-content h3{
+    color:black;
+}
 
 /* Footer */
 footer {
@@ -287,25 +235,29 @@ footer a{
 }
 
 footer a:hover{
-    color: grey
+    color: #555;
 }
 
 /* Button */
 .rectangular-button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #333;
+    margin-left: 20px;
+    position: relative;
+    overflow: hidden;
     color: white;
     text-decoration: none;
     border: none;
     border-radius: 5px;
     font-family: 'Staatliches', sans-serif;
     font-size: 15px;
-    transition: background-color 0.3s, color 0.3s;
+    background: linear-gradient(to right, #333 50%, #555 50%);
+    background-size: 200% 100%;
+    transition: background-position 0.3s;
 }
 
 .rectangular-button:hover {
-    background-color: #555;
+    background-position: -100% 0;
     color: #fff;
 }
 
@@ -374,31 +326,14 @@ footer a:hover{
     }
 
     /* Discovery Page */
-    .discovery-content {
-        border-left: 7px solid #fff;
-    }
     .discovery-content h3 {
         font-size: 1.5em; 
     }
+
     .content-container {
         margin: 0 5% 5% 5%;
     }
-    .discovery-content {
-        padding-left: 1%;
-        padding-right: 20px;
-    }
-    .discovery-subsection img{
-        float: right;
-        width: 80%;
-        max-width: 320px;
-        height: auto;
-        margin-left: 100px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        border-style: solid;
-        border-color: white;
-        border-width: 4px;
-    }
+
     /* Science Page */
     .science-content h3 {
         font-size: 1.5em;
@@ -408,47 +343,12 @@ footer a:hover{
     .society-content h3 {
         font-size: 1.5em; 
     }
-    .background1{
-        background-color: #dadada;
-        height:auto;
-        width:auto;
-    }
-    
-    .background2{
-        background-color: #dadada;
-        height:auto;
-        width:auto;
-    }
-    .society-content-box {
-        background-color: #dadada;
-        height: auto;
-        overflow: unset;
-    }
-    .society-content-box .society-subsection-left h3 {
-        color: black;
-        margin-bottom: -20px;
-        padding-right: 20px;
-        border-right: none;
-    
-    }
-    .society-content-box .society-subsection-right h3 {
-        color: black;
-        padding-right: 20px;
-    }
-    .society-content-box .society-subsection-left p {
-        color: black;
-        border-right: none;
-        padding-right: 20px;
-        
-    }
-    .society-content-box .society-subsection-right p {
-        color: black; 
-    }
+
     /* Button */
 .rectangular-button {
     padding: 10px 20px;
-    margin-right: 20px;
-    float: right;
+    margin-left: 30px;
+    float: left;
     background-color: #333;
     color: white;
     text-decoration: none;
@@ -456,7 +356,9 @@ footer a:hover{
     border-radius: 5px;
     font-family: 'Staatliches', sans-serif;
     font-size: 15px;
-    transition: background-color 0.3s, color 0.3s;
+    background: linear-gradient(to right, #333 50%, #555 50%);
+    background-size: 200% 100%;
+    transition: background-position 0.3s;
 }
 
     /* Footer */
@@ -478,6 +380,7 @@ footer a:hover{
         margin-right: 30px;
         float: right;
     }
+
     .text-links {
         display: flex;
         font-family: 'Staatliches', sans-serif;
@@ -486,9 +389,8 @@ footer a:hover{
         margin-right: 10px;
         height: auto;
         max-height: 0px;
-        overflow: hidden;
         transition: max-height 0.4s ease-in-out;
-
+        overflow: hidden
     }
 
     .text-link {
@@ -498,11 +400,39 @@ footer a:hover{
     }
     .mobile-nav {
         display: flex;
-        position: sticky;
-        top: 0;
-        background-color: white;
         flex-direction: column;
         align-items: flex-end;
         padding: 10px;
     }
-}
+    
+    .mobile-nav a {
+        color: black;
+        text-decoration: none;
+        position: relative;
+        display: block;
+    }
+    
+    .mobile-nav a::before,
+    .mobile-nav a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 2px;
+        background: black;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.3s;
+    }
+    
+    .mobile-nav a::after {
+        transform-origin: left;
+    }
+    
+    .mobile-nav a:hover::before,
+    .mobile-nav a:hover::after {
+        transform: scaleX(1);
+    }
+
+    }

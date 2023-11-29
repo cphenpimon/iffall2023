@@ -1,0 +1,686 @@
+body {
+    font-family: "interstate", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+a {
+    scroll-margin-top: 100px;
+}
+
+/* Desktop Nav Bar */
+.desktop-nav {
+    background-color: white;
+    padding: 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.desktop-nav ul {
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.desktop-nav ul li {
+    display: inline-block;
+    margin-right: 40px;
+    margin-left: 40px;
+    font-family: 'Staatliches', sans-serif;
+    font-size: 25px;
+    position: relative;
+}
+
+.desktop-nav a {
+    text-decoration: none;
+    color: black;
+}
+
+.desktop-nav a::before,
+.desktop-nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background: black;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s;
+}
+
+.desktop-nav a::after {
+    transform-origin: left;
+}
+
+.desktop-nav a:hover::before,
+.desktop-nav a:hover::after {
+    transform: scaleX(1);
+}
+
+.mobile-nav {
+    display: none;
+}
+
+/*Images*/
+
+img {
+    max-width: 100%;
+    /* height: auto; */
+    display: block;
+    overflow: visible;
+}
+
+/* Global Styles */
+h1{
+    font-size: 60px;
+    font-family: 'Staatliches', sans-serif;
+    color: black;
+}
+
+h3{
+    font-family: 'Staatliches', sans-serif;
+    color: black;
+    font-size: 35px;
+    padding-bottom: 20px;
+}
+
+p{
+    font-family: "interstate", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 25px;
+    padding-bottom: 17px;
+    color: black;
+}
+
+/*Home Page */
+.home-content h1, h3{
+    margin-top: 40px;
+    margin-bottom: -16px;
+    padding-right: 50%;
+    color: white;
+}
+
+.home-content p{
+     padding-right: 50%;
+     color: white;
+  }
+
+header{
+    background-image: url("../images/home-background.jpg");
+    background-position: center;
+    background-size: cover;
+    text-align: left;
+    width: 100%;
+}
+
+section.discovery-home{
+    background-color: rgb(0, 0, 0);
+}
+
+section.society-home{
+    background-color: white;
+}
+
+section.society-home h3{
+    color:black;
+}
+
+section.society-home p{
+    color:black;
+}
+
+section.science-home{
+    background-color:black;
+}
+
+.home-container{
+    width: 960px;
+    height: 420px;
+    margin: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+}
+
+header .home-container{
+    padding-top: 152px;
+    padding-bottom: 184px;
+}
+
+img.home{
+    object-fit: cover;
+    float: right;
+    width: 400px;
+    height: 300px;
+    margin-left: 40px;
+    margin-bottom: 40px;
+}
+/*Discovery Page */
+
+body.inside-page {
+  background-color: black;
+}
+
+.discovery-content {
+    border-left: 12px solid #fff;
+}
+.discovery-subsection h3 {
+    color:white;
+    margin-left: 50px;
+}
+
+.discovery-subsection p{
+    color:white;
+    max-width: 400px;
+    margin-left: 50px;
+}
+
+.discovery-subsection img{
+    float: right;
+    width: 320px;
+    height: auto;
+    margin-left: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-style: solid;
+    border-color: white;
+    border-width: 7px;
+}
+
+.content-container{
+    margin: 0 10% 10% 10%;
+}
+
+/*Society Page */
+
+.society-content-box {
+    display: flex;
+    background-color: black;
+    width: auto;
+    margin-right: auto;
+    margin-left: auto;
+    overflow:auto;
+    height: auto;
+}
+.society-content-box .society-subsection-left{
+
+    width: auto;
+    max-width: 500px;
+    height: max-content;
+    margin-left: auto;
+    margin-right: 30px;
+}
+
+.society-content-box .society-subsection-right{
+
+    width: auto;
+    max-width: 500px;
+    height: max-content;
+    margin-right: auto;
+    margin-left: 20px;      
+}
+.society-content-box .society-subsection-left h3 {
+    color: white;
+    margin-bottom: -20px;
+    padding-right: 20px;
+    border-right: 15px solid #fff;
+
+}
+.society-content-box .society-subsection-right h3 {
+    color: white;
+    padding-right: 20px;
+}
+.society-content-box .society-subsection-left p {
+    color: white;
+    border-right: 15px solid #fff;
+    padding-right: 20px;
+    
+}
+.society-content-box .society-subsection-right p {
+    color: white; 
+}
+.background1{
+    background-color: black;
+    height:auto;
+    width:auto;
+}
+
+.background2{
+    background-color: #dadada;
+    height:auto;
+    width:auto;
+}
+.society-subsection > * {
+    display: block;
+}
+.society-subsection {
+    min-height: 630px;
+}
+.society-subsection img{
+    float: left;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    object-fit: contain;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 40px;
+    border-style: solid;
+    border-color: white;
+    border-width: 7px;
+}
+.society-subsection h3{
+    color: black;
+    padding-top: 40px;
+}
+.society-subsection p{
+    color: black;
+    max-width: 800;
+    padding-bottom: 30px;
+    overflow: hidden;
+    display: inline-block;
+}
+/*Science Page */
+.science-content {
+    display: flex;
+}
+.science-content > * { 
+    flex: 1;
+}
+.science-content h3{
+    color:white;
+    margin-top: 0px;
+}
+.science-content p{
+    color:white;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.science-subsection-right img{
+    border-style: solid;
+    border-color: white;
+    border-width: 7px;
+    
+}
+.vl {
+    width: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background: linear-gradient(#ffff, #ffff) no-repeat center/15px 100%;
+}
+.science-subsection-left {
+    max-width: 600px;
+    margin-right: 20px;
+    
+}
+.science-subsection-right {
+    max-width: 600px;
+    margin-right: 20px;
+    
+}
+
+/* Footer */
+footer {
+    background-color: black;
+    color: white;
+    text-align: left;
+    padding-left: 10%;
+    position: absolute;
+    width: 100%;
+}
+
+footer p{
+    color: white;
+}
+
+footer a{
+    color: white;
+}
+
+footer a:hover{
+    color: #555
+}
+
+/* Button */
+.rectangular-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Staatliches', sans-serif;
+    font-size: 15px;
+    background: linear-gradient(to right, #333 50%, #555 50%);
+    background-size: 200% 100%;
+    transition: background-position 0.3s;
+    position: relative;
+}
+
+.rectangular-button:hover {
+    background-position: -100% 0;
+    color: #fff;
+}
+
+.rectangular-button a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 767px) {
+    /* Global Styles */
+    h1 {
+        font-size: 2em; 
+    }
+
+    h3 {
+        font-size: 1.5em;
+        padding-bottom: 10px;
+    }
+
+    p {
+        width: 90%;
+        font-size: 13px;
+        line-height: 1.5;
+        padding-bottom: 30px;
+    }
+    .desktop-nav {
+        display: none;
+    }
+
+    /* Home Page */
+    .home-content h1,
+    .home-content h3,
+    .home-content p {
+        margin-top: 20px;
+        margin-bottom: -8px;
+        text-align: left;
+        padding-right: 0; 
+        padding-left: 20px;
+    }
+
+    /* Header */
+    header .home-container {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .home-container{
+        width: 100%;
+        height: auto;
+        margin: auto;
+        padding-top: 0px;
+        padding-bottom: 70px;
+        padding-left: 0px;
+    }
+
+    img.home {
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        width: 100%;
+        height: auto;
+        border: aliceblue;
+    }
+
+    /* Discovery Page */
+    .discovery-content {
+        border-left: 7px solid #fff;
+    }
+    .discovery-content h3 {
+        font-size: 1.5em;
+        height: auto;
+        padding: 0;
+        margin-bottom: 10px;
+    }
+    .content-container {
+        margin: 0 5% 5% 5%;
+    }
+    .discovery-content {
+        padding-left: 0%;
+        padding-right: 0px;
+    }
+    .discovery-content p{
+        display: block;
+        overflow: hidden;
+    }
+    .discovery-subsection {
+        margin-left: 30px;
+    }
+    .discovery-subsection p {
+        margin-left: 0px;
+    }
+    .discovery-subsection h3 {
+        margin-left: 0px;
+    }
+    .discovery-subsection img{
+        float: left;
+        width: 80%;
+        max-width: 320px;
+        margin-left: 0px;
+        height: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border-style: solid;
+        border-color: white;
+        border-width: 4px;
+    }
+    /* Science Page */
+    .science-content h3 {
+        font-size: 1.5em;
+        padding: 0;
+        margin-bottom: 10px;
+        margin-top: 20px;
+    }
+
+    /* Society Page */
+    .society-content h3 {
+        font-size: 1.5em; 
+    }
+    .background1{
+        background-color: #dadada;
+        height:auto;
+        width:auto;
+    }
+    
+    .background2{
+        background-color: #dadada;
+        height:auto;
+        width:auto;
+    }
+    a[name="society"] {
+        color: #dadada;
+    }
+    .society-content-box {
+        background-color: #dadada;
+        display: block;
+        height: auto;
+        overflow: unset;
+    }
+    .society-content-box .society-subsection-left{
+        margin: 0px;
+    }
+    .society-content-box .society-subsection-left {
+        width: auto;
+        max-width: 500px;
+        height: max-content;
+        margin-right: auto;
+        margin-left: 20px;
+        padding-top: 30px;
+    }
+    .society-content-box .society-subsection-right {
+        width: auto;
+        max-width: 500px;
+        height: max-content;
+        margin-right: auto;
+        margin-left: 20px;
+    }
+    .society-content-box .society-subsection-left h3 {
+        color: black;
+        margin-bottom: -20px;
+        padding-right: 20px;
+        border-right: none;
+    
+    }
+    .society-content-box .society-subsection-right h3 {
+        color: black;
+        padding-right: 20px;
+    }
+    .society-content-box .society-subsection-left p {
+        color: black;
+        border-right: none;
+        padding-right: 20px;
+        
+    }
+    .society-content-box .society-subsection-right p {
+        color: black; 
+    }
+    .society2-content {
+        margin-left: 20px;
+    }
+    .society-subsection img {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 0px;
+        width: 90%;
+        float: left;
+    }
+    .society-subsection-right p {
+        margin-block-end: 0;
+    }
+    .society-subsection h3 {
+        margin-top: 0;
+    }
+    .background1 .content-container {
+        margin: 0 5% 0 5%;
+    }
+    .science-content {
+        margin-left: 20px;
+        flex-direction: column;
+    }
+    .science-subsection-left {
+        padding-right: 0px;
+    }
+    .science-subsection-right img {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 0px;
+        width: 90%;
+        float: left;
+    }
+    
+    /* Button */
+.rectangular-button {
+    padding: 10px 20px;
+    margin-left: 30px;
+    float: left;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Staatliches', sans-serif;
+    font-size: 15px;
+    background: linear-gradient(to right, #333 50%, #555 50%);
+    background-size: 200% 100%;
+    transition: background-position 0.3s;
+}
+
+    /* Footer */
+    footer {
+        padding-left: 30px;
+    }
+
+    footer p {
+        margin: 0;
+        text-align: left;
+        padding-left: 20px;
+    }
+
+    /* Mobile Nav*/
+    .menu-toggle {
+        display: block;
+        font-size: 30px;
+        margin-right: 30px;
+        float: right;
+    }
+    .text-links {
+        display: flex;
+        font-family: 'Staatliches', sans-serif;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-right: 10px;
+        height: auto;
+        max-height: 0px;
+        overflow: hidden;
+        transition: max-height 0.2s ease-in-out;
+
+    }
+
+    .text-link {
+        display: flex;
+        font-size: 24px;
+        margin: 10px;
+    }
+    
+    .mobile-nav {
+        display: flex;
+        position: sticky;
+        top: 0;
+        overflow: hidden;
+        background-color: white;
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 10px;
+    }
+    .mobile-nav {
+        display: flex;
+        position: sticky;
+        top: 0;
+        overflow: hidden;
+        background-color: white;
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 10px;
+    }
+    
+    .mobile-nav a {
+        text-decoration: none;
+        color: black;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .mobile-nav a::before,
+    .mobile-nav a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 2px;
+        background: #333;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.3s;
+    }
+    
+    .mobile-nav a:hover::before,
+    .mobile-nav a:hover::after {
+        transform: scaleX(1);
+    }
+}
