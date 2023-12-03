@@ -1,0 +1,112 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <title>Time - Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/hue4ggh.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body class="home-content">
+    <script>function toggleMobileMenu() {
+        var mobileLinks = document.querySelectorAll('.text-links');
+        mobileLinks.forEach(function(link) {
+            link.style.maxHeight = (link.style.maxHeight === '0px') ? '500px' : '0px';
+        });
+    }</script>
+
+    <header>
+        <div class="home-container">
+            <h1>Time</h1>
+            <h3>What is Time Anyways?</h3>
+            <p>Time is the continued sequence of existence and events that occurs in an apparently irreversible succession from the past, through the present, and into the future. It is a component quantity of various measurements used to sequence events, to compare the duration of events or the intervals between them, and to quantify rates of change of quantities in material reality or in the conscious experience. Time is often referred to as a fourth dimension, along with three spatial dimensions.</p>
+        </div>
+    </header>
+
+<!----Desktop Nav Bar-->
+<div class="desktop-nav">
+    <nav>
+        <ul>
+            <li><a href="index.html">Time</a></li>
+            <li><a href="inside.html#discovery">Discovery</a></li>
+            <li><a href="inside.html#society">Society</a></li>
+            <li><a href="inside.html#science">Science</a></li>
+        </ul>
+    </nav>
+</div>
+
+<!---Mobile Nav Bar-->
+<nav class="mobile-nav">
+    <div class="menu-toggle" onclick="toggleMobileMenu()">☰</div>
+    <div class="text-links" style="max-height: 0px;">
+        <div class="text-link"><a href="index.html">Time</a></div>
+        <div class="text-link"><a href="inside.html#discovery">Discovery</a></div>
+        <div class="text-link"><a href="inside.html#society">Society</a></div>
+        <div class="text-link"><a href="inside.html#science">Science</a></div>
+    </div>
+</nav>
+
+<!----Discovery Home-->
+<section class="discovery-home">
+    <div class="home-container">
+        <img class="home" src="images/discovery-home.jpg">
+        <h3>Discovery</h3>
+        <p>The discovery of time measurement has evolved through history. Early civilizations used sundials, while the hourglass became popular in the Middle Ages. The development of the modern watch in the 16th century marked a significant leap in timekeeping, enhancing accuracy and portability in our daily lives.</p>
+       <button class="rectangular-button"><a href="inside.html#discovery">Learn More</a></button>
+
+    </div>
+</section>
+
+<!----Society Home-->
+<section class="society-home">
+    <div class="home-container">
+        <img class="home" src="images/society-home.jpg">
+        <h3>Society</h3>
+        <p>Time is the heartbeat of society, orchestrating our daily routines and milestones. It structures our lives, from punctual meetings to annual celebrations, and fuels our ambitions, prompting us to set goals and deadlines. The collective agreement on time allows for coordination, collaboration, and progress. It also holds religious and philosophical significance, influencing our beliefs and inspiring deep philosophical questions about existence and reality.</p>
+        <button class="rectangular-button"><a href="inside.html#society">Learn More</a></button>
+    </div>
+</section>
+
+<!----Science Home-->
+<section class="science-home">
+    <div class="home-container">
+        <img class="home" src="images/science-home.jpg">
+        <h3>Science</h3>
+        <p>The science of time, or horology, delves into the nature, measurement, and perception of time. It encompasses various scientific disciplines, including physics, astronomy, and psychology, to explore time's fundamental properties, from its role in the universe to the development of precise timekeeping devices like atomic clocks.</p>
+        <button class="rectangular-button"><a href="inside.html#science">Learn More</a></button>
+    </div>
+</section>
+    
+<!---Footer-->
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+        footer {
+            padding-left: 0%;
+            width: 100%;
+        }
+        footer p{
+            padding-right: 0 !important;
+            padding-left: 20px;
+            width: 100%;
+            max-width: 960px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        @media only screen and (max-width: 767px) {
+            footer {
+                padding-left: 0%;
+            }
+        }
+    </style>
+    <footer>
+        <div>
+            <p>Designer: Chandra Phenpimon<br>CD: Leah Fontenot<br>Fall Interaction Foundations<br>Copyright 2023<br>Source: <a href="https://en.wikipedia.org/wiki/Time">Time Wikipedia Page</a></p>
+        </div>
+    </footer>
+</body>
+</html>
